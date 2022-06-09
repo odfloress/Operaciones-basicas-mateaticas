@@ -20,10 +20,27 @@ switch($accion){
                     // header('Location: formulario.php');  //redirige a paginas
     break;
 
+    case "seleccionar":    
 
+                    $sql = "SELECT id, nombre, correo FROM personas WHERE nombre='$_POST[nombre]'";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                      // output data of each row
+                      while($row = $result->fetch_assoc()) {
+                        echo "id: " . $row["id"]. $row["nombre"]. " " . $row["correo"]. "<br>";
+                      }
+                    } else {
+                      echo "El registro no existe";
+                    }
+                    $conn->close();         
+
+                      echo "<br>";
+                    echo "Hola ". $nombre ." toco el botón selec " ;
+    break;
 
       case "modificar":
-        echo "toco el botón calcular" . $nombre;
+        echo "Hola ". $nombre ." toco el botón calcular " ;
         break;
       case "eliminar":
         echo "toco el boton eliminar";

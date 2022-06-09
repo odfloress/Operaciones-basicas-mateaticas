@@ -14,11 +14,11 @@
   <form action="guardar.php" method="POST">
     <div class="mb-3 mt-3">
       <label for="nombre">Nombre:</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Enter email" name="nombre">
+      <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre" name="nombre" required>
     </div>
     <div class="mb-3">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="correo">
+      <input type="email" class="form-control" id="email" placeholder="Ingresa el correo" name="correo" required>
     </div>
     <div class="form-check mb-3">
       <label class="form-check-label">
@@ -26,10 +26,12 @@
       </label>
     </div>
     <button type="submit" name="accion" value="insertar" class="btn btn-primary">Crear</button>
+    <button type="submit" name="accion" value="seleccionar" class="btn btn-primary">Seleccionar</button>
     <button type="submit" name="accion" value="modificar" class="btn btn-primary">modificar</button>
     <button type="submit" name="accion" value="eliminar" class="btn btn-primary">eliminar</button>
   </form>
 </div>
+
 
 </body>
 </html>
